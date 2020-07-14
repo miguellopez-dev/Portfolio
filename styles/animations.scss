@@ -1,0 +1,18 @@
+/***************** KEYFRAMES SECTION *****************/
+@keyframes wave {
+	from {
+		transform: rotateZ(-11deg);
+	}
+	to {
+		transform: rotateZ(11deg);
+	}
+}
+
+@keyframes opa {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

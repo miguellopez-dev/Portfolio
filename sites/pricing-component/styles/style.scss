@@ -1,0 +1,270 @@
+/************ GLOBAL STYLES ************/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5rem;
+}
+
+main {
+	background-color: hsl(240, 78%, 98%);
+	background-image: url('../images/bg-bottom.svg'), url('../images/bg-top.svg');
+	background-position: bottom left, top right;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
+h2 {
+	font-size: 2.8rem;
+	color: hsl(233, 13%, 49%);
+}
+
+h3 {
+	margin-top: 3rem;
+}
+h3,
+h4 {
+	font-size: 1.3rem;
+}
+
+button {
+	border: none;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	width: 80%;
+	height: 3.5rem;
+	margin-bottom: 2.5rem;
+	transition: all 0.5s;
+}
+
+/************ WRAPPER SECTION ************/
+.wrapper {
+	width: 70%;
+	margin: auto;
+}
+
+/************ TOP SECTION ************/
+.top {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	padding-top: 5rem;
+}
+
+.selection {
+	color: hsl(234, 14%, 74%);
+	display: flex;
+	width: 55%;
+	margin: auto;
+	padding-top: 4rem;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.dark {
+	color: hsl(233, 13%, 49%);
+}
+// toggle for prices
+.slider {
+	position: relative;
+	display: inline-block;
+	width: 4rem;
+	height: 2.5rem;
+	background-color: hsl(237, 63%, 64%);
+	border-radius: 2rem;
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 50%;
+		background-color: #ffffff;
+		left: 3px;
+		bottom: 5px;
+		transition: all 0.3s;
+	}
+}
+
+.checkbox:checked + .slider:before {
+	left: 20px;
+}
+
+.checkbox:checked + .slider {
+	background-color: hsl(236, 72%, 79%);
+}
+
+.checkbox:focus + .slider {
+	box-shadow: 0 0 3px hsl(236, 72%, 79%);
+	outline: 3px solid hsl(236, 72%, 79%);
+}
+
+.checkbox {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip: rect(1px 1px 1px 1px);
+}
+
+/************ CARD SECTIONS ************/
+
+.cards {
+	color: hsl(233, 13%, 49%);
+	display: flex;
+
+	text-align: center;
+	padding-top: 5.5rem;
+}
+.side-card {
+	background: #ffffff;
+	border-radius: 2.5% 0 0 2.5%;
+	box-shadow: 0 5px 20px rgba(#000000, 0.1);
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	width: 33%;
+
+	hr {
+		margin: 2rem;
+
+		opacity: 0.2;
+	}
+
+	button {
+		background-image: linear-gradient(
+			to right,
+			hsl(236, 72%, 79%),
+			hsl(237, 63%, 64%)
+		);
+		text-transform: uppercase;
+		color: hsl(240, 78%, 98%);
+		font-weight: 700;
+
+		&:hover,
+		&:focus {
+			background: transparent;
+			border: solid 1px hsl(237, 63%, 64%);
+			color: hsl(237, 63%, 64%);
+
+			outline: none;
+		}
+	}
+}
+.right {
+	border-radius: 0 2.5% 0.8rem 2.5%;
+}
+
+.middle-card {
+	color: #ffffff;
+	background: linear-gradient(
+		to bottom right,
+		hsl(236, 72%, 79%),
+		hsl(237, 63%, 64%)
+	);
+	border-radius: 2.5%;
+	width: 33%;
+	padding: 1.5rem;
+
+	.yearly,
+	.monthly {
+		color: #ffffff;
+	}
+
+	hr {
+		border-color: hsl(240, 78%, 98%);
+		opacity: 0.2;
+		margin: 2rem;
+	}
+
+	button {
+		background: #ffffff;
+		color: hsl(237, 63%, 64%);
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
+		font-weight: 700;
+
+		&:hover,
+		&:focus {
+			outline: transparent;
+			background: transparent;
+			border: solid 1px #ffffff;
+			color: #ffffff;
+			transition: all 0.2s;
+		}
+	}
+}
+
+.yearly,
+.monthly {
+	color: hsl(232, 13%, 33%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 5.5rem;
+	padding: 1rem 1rem 0;
+	.currency {
+		padding-right: 0.5rem;
+		font-size: 3.2rem;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.attribution {
+	font-size: 1.1rem;
+	text-align: center;
+	a {
+		color: hsl(228, 45%, 44%);
+		&:hover {
+			color: hsl(236, 72%, 79%);
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.wrapper {
+		width: 90%;
+	}
+
+	.selection {
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	main {
+		background-size: 50%;
+		background-position: bottom left, 140% 0;
+	}
+	.top {
+		width: 70%;
+	}
+	.selection {
+		width: 100%;
+	}
+
+	.cards {
+		flex-wrap: wrap;
+	}
+
+	.side-card,
+	.middle-card {
+		border-radius: 2.5%;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		flex: 1 1 350px;
+	}
+}

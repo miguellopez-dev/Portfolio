@@ -1,0 +1,29 @@
+$background-color: #dce6ef;
+$dark-primary: #142850;
+$secondry-color: #27496d;
+$light-color: #dae1e7;
+$hover-color: #00909e;
+
+$main-font: 'Montserrat', sans-serif;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-overflow-scrolling: touch;
+	touch-action: manipulation;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+h2 {
+	font-size: 3.8rem;
+}
+
+h3,
+h4 {
+	font-size: 2.6rem;
+}

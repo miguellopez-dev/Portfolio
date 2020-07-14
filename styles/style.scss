@@ -1,0 +1,424 @@
+@import 'global.scss';
+@import 'animations.scss';
+
+/***************** ICONs AND SOCIAL-ICONS STYLING *****************/
+
+.social-links {
+	font-size: 2.5rem;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 2.6rem;
+
+	.icons {
+		padding: 1.5rem;
+		display: inline-block;
+		transition: transform 0.15s ease-in-out;
+		&:hover {
+			transform: scale(1.7);
+		}
+	}
+}
+
+.icons {
+	color: $secondry-color;
+	&:hover {
+		color: $hover-color;
+	}
+}
+/***************** HEADER SECTION *****************/
+.home-wrapper {
+	background-color: $background-color;
+	font-family: $main-font;
+}
+.header-nav {
+	padding-top: 1rem;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: $background-color;
+	z-index: 10;
+}
+
+.header {
+	width: 60%;
+	margin: auto;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+.logo {
+	padding-left: 2rem;
+}
+.burger {
+	position: relative;
+	cursor: pointer;
+	display: block;
+	margin-left: 1.4rem;
+	z-index: 80;
+
+	span {
+		background: $secondry-color;
+		margin: 0.4rem 0;
+		display: block;
+		border-radius: 0.2rem;
+		transition: all 0.5s;
+
+		&:nth-child(1) {
+			padding: 0.1rem 1.6rem;
+		}
+		&:nth-child(2) {
+			padding: 0.1rem 1.2rem;
+			width: 12px;
+		}
+		&:nth-child(3) {
+			padding: 0.1rem 0.8rem;
+			width: 9px;
+		}
+	}
+}
+
+.toggle span:nth-child(1) {
+	transform: rotateZ(45deg) translateY(350%);
+	background: $background-color;
+}
+.toggle .middle-line {
+	width: 0;
+	opacity: 0;
+}
+
+.toggle span:nth-child(3) {
+	transform: rotateZ(-45deg) translateY(-500%);
+	width: 16px;
+	padding: 0.1rem 1.6rem;
+	background: $background-color;
+}
+
+.nav-open {
+	transform: translateX(-100%);
+}
+nav {
+	ul {
+		list-style: none;
+		display: flex;
+	}
+}
+
+.dark-bg-nav {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	opacity: 0;
+	display: none;
+	background-color: rgba(74, 74, 74, 0.9);
+}
+
+.dark-bg-active {
+	animation: opa 0.5s forwards;
+	display: block;
+}
+
+.nav-links {
+	background-color: $secondry-color;
+	width: 75%;
+	height: 100%;
+	opacity: 0.9;
+	position: fixed;
+	top: 0;
+	left: 100%;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	transition: transform 0.5s;
+	clip-path: polygon(60% 0%, 0 50%, 60% 100%, 100% 100%, 100% 0);
+	li {
+		margin: 3rem 0;
+	}
+
+	a {
+		padding: 1rem;
+		text-decoration: none;
+		line-height: 4rem;
+		font-size: 3rem;
+		color: $light-color;
+
+		&:hover {
+			color: $hover-color;
+		}
+	}
+}
+
+/***************** HOME SECTION *****************/
+.main {
+	width: 100%;
+	position: relative;
+	color: $secondry-color;
+}
+
+.main-wrapper-inner {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.scene {
+	width: auto;
+	margin: auto;
+
+	flex-direction: column;
+	justify-content: center;
+	display: flex;
+	overflow: hidden;
+}
+
+.part1-inner {
+	width: 100%;
+	margin: auto;
+	padding-top: 5rem;
+	overflow: hidden;
+}
+
+.side-text {
+	text-align: center;
+	h2,
+	h3,
+	h4 {
+		margin-bottom: 2.6rem;
+	}
+	h4 {
+		font-size: 3rem;
+	}
+}
+
+.contact-btn {
+	padding: 2rem 4rem;
+	text-decoration: none;
+	background-color: $dark-primary;
+	border-radius: 0.5rem;
+	color: $light-color;
+	font-size: 1.5rem;
+	display: inline-block;
+	transition: all 0.2s;
+
+	&:hover {
+		background-color: $hover-color;
+
+		transform: scale(1.1);
+	}
+}
+
+.side-image {
+	width: 50%;
+	margin: 4rem auto;
+}
+
+#right-arm {
+	animation: wave 0.5s linear alternate infinite;
+	transform-origin: bottom;
+	transform-box: fill-box;
+}
+.person {
+	overflow: hidden;
+	width: 100%;
+}
+.idea {
+	display: none;
+}
+
+/***************** PORTFOLIO SECTION *****************/
+
+.part2-inner {
+	width: 80%;
+	margin: 5rem auto;
+	height: 100%;
+	text-align: center;
+	h2 {
+		margin: 1rem;
+	}
+}
+.imgs-slide {
+	width: 100%;
+	margin: 5rem auto;
+	display: flex;
+}
+
+.imgs {
+	width: 85%;
+	margin: 1rem;
+
+	img {
+		opacity: 0.8;
+		width: 100%;
+		cursor: pointer;
+		border-radius: 5px;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.description-img {
+	display: none;
+}
+
+.expandable-text {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.container-img {
+	position: relative;
+	height: 100%;
+	background-color: #ffffff;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 11px;
+
+	img {
+		border-radius: 11px 11px 0 0;
+	}
+}
+#infoText {
+	font-size: 1.5rem;
+	background-color: #ffffff;
+	border-radius: 0 0 11px 11px;
+	padding: 1rem;
+
+	h4 {
+		font-size: 2rem;
+		padding-top: 1rem;
+	}
+	p {
+		font-size: 1.5rem;
+		padding: 1.4rem 2.5rem;
+	}
+
+	.code-link {
+		width: 50%;
+		margin: auto;
+		.icons {
+			margin: 1rem;
+			font-size: 3rem;
+		}
+	}
+}
+
+/***************** CONTACT SECTION *****************/
+
+.part3-inner {
+	width: 80%;
+	margin: 5rem auto;
+	height: 100%;
+}
+.container-form {
+	border-radius: 0 0 8px 8px;
+	background-color: #f7f7f7;
+	padding: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+.contact {
+	background-color: $dark-primary;
+	border-radius: 8px 8px 0 0;
+	font-size: 2rem;
+	text-align: center;
+	padding: 2rem;
+	color: $background-color;
+}
+
+.required {
+	color: red;
+}
+
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	flex: 1 1 100px;
+}
+
+input[type='submit'] {
+	width: 100%;
+	background-color: $secondry-color;
+	color: $background-color;
+	padding: 12px 20px;
+	-webkit-appearance: none;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	&:hover {
+		background-color: $hover-color;
+		transition: background-color 0.2s linear;
+	}
+}
+
+label {
+	font-size: 1.5rem;
+	color: $secondry-color;
+}
+
+/***************** FOOTER SECTION *****************/
+footer {
+	text-align: center;
+	background-color: $dark-primary;
+	color: $light-color;
+}
+
+.footer-content {
+	padding: 4rem 0.8rem 6rem;
+	h3 {
+		font-size: 2.5rem;
+	}
+
+	p {
+		font-size: 2rem;
+		padding: 1rem 0;
+	}
+
+	.email-link {
+		color: $hover-color;
+		&:hover {
+			color: #f7f7f7;
+		}
+	}
+
+	.social-links {
+		margin-top: 2.6rem;
+	}
+
+	.icons {
+		color: $light-color;
+		&:hover {
+			color: $hover-color;
+		}
+	}
+	.copyright {
+		display: flex;
+		color: $secondry-color;
+		justify-content: center;
+		p {
+			font-size: 1.3rem;
+			color: $light-color;
+		}
+	}
+
+	#date:before {
+		content: ' ';
+	}
+}
+
+/***************** MEDIA QUERIES SECTION *****************/
+
+@media screen and (min-width: 768px) {
+}

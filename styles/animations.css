@@ -1,0 +1,40 @@
+/***************** KEYFRAMES SECTION *****************/
+@-webkit-keyframes wave {
+  from {
+    -webkit-transform: rotateZ(-11deg);
+            transform: rotateZ(-11deg);
+  }
+  to {
+    -webkit-transform: rotateZ(11deg);
+            transform: rotateZ(11deg);
+  }
+}
+@keyframes wave {
+  from {
+    -webkit-transform: rotateZ(-11deg);
+            transform: rotateZ(-11deg);
+  }
+  to {
+    -webkit-transform: rotateZ(11deg);
+            transform: rotateZ(11deg);
+  }
+}
+
+@-webkit-keyframes opa {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opa {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=animations.css.map */
