@@ -564,4 +564,11 @@ footer {
 }
 
 /***************** MEDIA QUERIES SECTION *****************/
+@media screen and (min-width: 760px) {
+  .nav-links {
+    width: 65%;
+    -webkit-clip-path: polygon(50% 0%, 0 50%, 50% 100%, 100% 100%, 100% 0);
+            clip-path: polygon(50% 0%, 0 50%, 50% 100%, 100% 100%, 100% 0);
+  }
+}
 /*# sourceMappingURL=style.css.map */
