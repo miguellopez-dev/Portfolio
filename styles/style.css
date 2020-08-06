@@ -26,22 +26,44 @@ h4 {
 /***************** KEYFRAMES SECTION *****************/
 @-webkit-keyframes wave {
   from {
-    -webkit-transform: rotateZ(-11deg);
-            transform: rotateZ(-11deg);
-  }
-  to {
     -webkit-transform: rotateZ(11deg);
             transform: rotateZ(11deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-11deg);
+            transform: rotateZ(-11deg);
   }
 }
 @keyframes wave {
   from {
+    -webkit-transform: rotateZ(11deg);
+            transform: rotateZ(11deg);
+  }
+  to {
     -webkit-transform: rotateZ(-11deg);
             transform: rotateZ(-11deg);
   }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
   to {
-    -webkit-transform: rotateZ(11deg);
-            transform: rotateZ(11deg);
+    -webkit-transform: translate(8%, -12%);
+            transform: translate(8%, -12%);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  to {
+    -webkit-transform: translate(8%, -12%);
+            transform: translate(8%, -12%);
   }
 }
 
@@ -197,6 +219,7 @@ nav ul {
   height: 100%;
   width: 100%;
   top: 0;
+  left: 0;
   opacity: 0;
   display: none;
   background-color: rgba(74, 74, 74, 0.9);
@@ -212,7 +235,8 @@ nav ul {
   background-color: #27496d;
   width: 75%;
   height: 100%;
-  opacity: 0.9;
+  -webkit-clip-path: polygon(60% 0%, 0 50%, 60% 100%, 100% 100%, 100% 0);
+          clip-path: polygon(60% 0%, 0 50%, 60% 100%, 100% 100%, 100% 0);
   position: fixed;
   top: 0;
   left: 100%;
@@ -230,8 +254,6 @@ nav ul {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  -webkit-clip-path: polygon(60% 0%, 0 50%, 60% 100%, 100% 100%, 100% 0);
-          clip-path: polygon(60% 0%, 0 50%, 60% 100%, 100% 100%, 100% 0);
 }
 
 .nav-links li {
@@ -259,31 +281,11 @@ nav ul {
 
 .main-wrapper-inner {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .scene {
   width: auto;
   margin: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   overflow: hidden;
 }
 
@@ -332,8 +334,8 @@ nav ul {
 }
 
 #right-arm {
-  -webkit-animation: wave 0.5s linear alternate infinite;
-          animation: wave 0.5s linear alternate infinite;
+  -webkit-animation: wave 0.8s linear alternate infinite;
+          animation: wave 0.8s linear alternate infinite;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   transform-box: fill-box;
@@ -352,7 +354,6 @@ nav ul {
 .part2-inner {
   width: 80%;
   margin: 5rem auto;
-  height: 100%;
   text-align: center;
 }
 
@@ -396,8 +397,6 @@ nav ul {
 }
 
 .container-img {
-  position: relative;
-  height: 100%;
   background-color: #ffffff;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -440,6 +439,16 @@ nav ul {
   width: 80%;
   margin: 5rem auto;
   height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container-form {
@@ -567,6 +576,8 @@ footer {
 @media screen and (min-width: 760px) {
   .nav-links {
     width: 65%;
+  }
+  .nav-open {
     -webkit-clip-path: polygon(50% 0%, 0 50%, 50% 100%, 100% 100%, 100% 0);
             clip-path: polygon(50% 0%, 0 50%, 50% 100%, 100% 100%, 100% 0);
   }

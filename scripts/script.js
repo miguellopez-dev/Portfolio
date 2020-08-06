@@ -4,31 +4,33 @@ nav = document.querySelector('.nav-links');
 links = nav.querySelectorAll('a');
 navbg = document.querySelector('.dark-bg-nav');
 
-burger.addEventListener('click', () => {
+const toggleAllTheThings = () => {
 	nav.classList.toggle('nav-open');
 	navbg.classList.toggle('dark-bg-active');
 	burger.classList.toggle('toggle');
+};
+
+burger.addEventListener('click', () => {
+	toggleAllTheThings();
 });
 
 links.forEach((link) => {
 	link.addEventListener('click', () => {
-		nav.classList.toggle('nav-open');
-		navbg.classList.toggle('dark-bg-active');
-		burger.classList.toggle('toggle');
+		nav.classList.remove('nav-open');
+		navbg.classList.remove('dark-bg-active');
+		burger.classList.remove('toggle');
 	});
 });
 
 navbg.addEventListener('click', () => {
-	nav.classList.toggle('nav-open');
-	navbg.classList.toggle('dark-bg-active');
-	burger.classList.toggle('toggle');
+	toggleAllTheThings();
 });
 
 img1 = document.querySelectorAll('.imgs');
-let expandImg = document.getElementById('expandedImg');
-let infoText = document.getElementById('infoText');
-let expandText = document.getElementById('expandText');
-let col = document.getElementById('collapse');
+const expandImg = document.getElementById('expandedImg');
+const infoText = document.getElementById('infoText');
+const expandText = document.getElementById('expandText');
+const col = document.getElementById('collapse');
 
 expandImg.src = img1[0].children[0].getAttribute('src');
 infoText.innerHTML = img1[0].children[1].innerHTML;

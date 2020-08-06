@@ -1,10 +1,19 @@
 /***************** KEYFRAMES SECTION *****************/
 @keyframes wave {
 	from {
-		transform: rotateZ(-11deg);
+		transform: rotateZ(11deg);
 	}
 	to {
-		transform: rotateZ(11deg);
+		transform: rotateZ(-11deg);
+	}
+}
+
+@keyframes bounce {
+	from {
+		transform: translate(0);
+	}
+	to {
+		transform: translate(8%, -12%);
 	}
 }
 
