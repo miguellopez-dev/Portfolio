@@ -26,6 +26,8 @@ navbg.addEventListener('click', () => {
 	toggleAllTheThings();
 });
 
+// IMG Gallery
+
 img1 = document.querySelectorAll('.imgs');
 const expandImg = document.getElementById('expandedImg');
 const infoText = document.getElementById('infoText');

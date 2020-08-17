@@ -434,6 +434,10 @@ nav ul {
   font-size: 3rem;
 }
 
+#expandedImg {
+  width: 100%;
+}
+
 /***************** CONTACT SECTION *****************/
 .part3-inner {
   width: 80%;
@@ -573,6 +577,130 @@ footer {
 }
 
 /***************** MEDIA QUERIES SECTION *****************/
+@media screen and (min-width: 769px) {
+  .header {
+    width: 70%;
+    margin-left: 5rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  nav {
+    width: 100%;
+  }
+  .logo {
+    width: 60%;
+    min-width: 55%;
+  }
+  .nav-links {
+    width: 100%;
+    background-color: initial;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: initial;
+    -webkit-clip-path: none;
+            clip-path: none;
+    margin-left: 3rem;
+  }
+  .nav-links a {
+    color: #27496d;
+    padding: 2rem;
+    font-size: 2rem;
+  }
+  .burger {
+    display: none;
+  }
+  .scene {
+    height: 100%;
+    width: 100%;
+  }
+  /***************** HOME SECTION *****************/
+  .part1-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    padding-top: 0;
+    height: 85vh;
+  }
+  .side-text {
+    width: 50%;
+    height: auto;
+  }
+  .side-image {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .person {
+    display: inline-block;
+    width: 40%;
+  }
+  .idea {
+    display: inline-block;
+    width: 59%;
+  }
+  /***************** PROJECTS SECTION *****************/
+  .part2-inner {
+    height: 100vh;
+    width: 90%;
+  }
+  .part2-inner h2 {
+    margin: 4rem;
+  }
+  .img-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .imgs-slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80%;
+    width: 20%;
+  }
+  .container-img {
+    width: 80%;
+    height: 100%;
+  }
+  /***************** CONTACTS SECTION *****************/
+  .part3-inner {
+    max-width: 99.9rem;
+  }
+  .container-form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /***************** FOOTER SECTION *****************/
+  .scene + .part4 {
+    height: 40vh;
+  }
+}
+
 @media screen and (min-width: 760px) {
   .nav-links {
     width: 65%;

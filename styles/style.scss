@@ -298,6 +298,9 @@ nav {
 		}
 	}
 }
+#expandedImg {
+	width: 100%;
+}
 
 /***************** CONTACT SECTION *****************/
 
@@ -414,6 +417,113 @@ footer {
 }
 
 /***************** MEDIA QUERIES SECTION *****************/
+
+@media screen and (min-width: 769px) {
+	.header {
+		width: 70%;
+		margin-left: 5rem;
+		justify-content: start;
+	}
+	nav {
+		width: 100%;
+	}
+	.logo {
+		width: 60%;
+		min-width: 55%;
+	}
+
+	.nav-links {
+		width: 100%;
+		background-color: initial;
+		flex-direction: row;
+		justify-content: space-between;
+		position: initial;
+		clip-path: none;
+		margin-left: 3rem;
+		a {
+			color: $secondry-color;
+			padding: 2rem;
+			font-size: 2rem;
+		}
+	}
+
+	.burger {
+		display: none;
+	}
+
+	.scene {
+		height: 100%;
+		width: 100%;
+	}
+	/***************** HOME SECTION *****************/
+
+	.part1-inner {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding-top: 0;
+		height: 85vh;
+	}
+
+	.side-text {
+		width: 50%;
+		height: auto;
+	}
+
+	.side-image {
+		width: 50%;
+		display: flex;
+		align-items: center;
+	}
+
+	.person {
+		display: inline-block;
+		width: 40%;
+	}
+
+	.idea {
+		display: inline-block;
+		width: 59%;
+	}
+	/***************** PROJECTS SECTION *****************/
+
+	.part2-inner {
+		height: 100vh;
+		width: 90%;
+		h2 {
+			margin: 4rem;
+		}
+	}
+	.img-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: max-content;
+	}
+	.imgs-slide {
+		flex-direction: column;
+		height: 80%;
+		width: 20%;
+	}
+
+	.container-img {
+		width: 80%;
+		height: 100%;
+	}
+
+	/***************** CONTACTS SECTION *****************/
+	.part3-inner {
+		max-width: 99.9rem;
+	}
+
+	.container-form {
+		justify-content: center;
+	}
+	/***************** FOOTER SECTION *****************/
+	.scene + .part4 {
+		height: 40vh;
+	}
+}
 
 @media screen and (min-width: 760px) {
 	.nav-links {
