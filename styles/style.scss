@@ -1,5 +1,5 @@
-@import 'global.scss';
-@import 'animations.scss';
+@import '_global';
+@import '_animations';
 
 /***************** ICONs AND SOCIAL-ICONS STYLING *****************/
 
@@ -316,8 +316,6 @@ nav {
 	border-radius: 0 0 8px 8px;
 	background-color: #f7f7f7;
 	padding: 2rem;
-	display: flex;
-	flex-wrap: wrap;
 }
 .contact {
 	background-color: $dark-primary;
@@ -418,18 +416,20 @@ footer {
 
 /***************** MEDIA QUERIES SECTION *****************/
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
 	.header {
 		width: 70%;
 		margin-left: 5rem;
 		justify-content: start;
+		max-height: 10vh;
 	}
 	nav {
 		width: 100%;
 	}
+
 	.logo {
 		width: 60%;
-		min-width: 55%;
+		min-width: 40%;
 	}
 
 	.nav-links {
@@ -468,6 +468,11 @@ footer {
 	.side-text {
 		width: 50%;
 		height: auto;
+		h2,
+		h3,
+		h4 {
+			font-size: calc(3rem + 1vw);
+		}
 	}
 
 	.side-image {
@@ -480,6 +485,30 @@ footer {
 		display: inline-block;
 		width: 40%;
 	}
+	#idea {
+		animation: bounce linear 1s alternate infinite;
+	}
+
+	#lamp {
+		#outer-shine,
+		#right-line,
+		#left-line,
+		#swiggle {
+			animation: light linear 1.2s alternate infinite;
+		}
+	}
+
+	#top-right-globe {
+		animation: topRightGlobe linear 2.3s infinite;
+	}
+
+	#top-left-globe {
+		animation: topLeftGlobe linear 2.1s infinite;
+	}
+
+	#bottom-right-globe {
+		animation: bottomRightGlobe linear 2.5s infinite;
+	}
 
 	.idea {
 		display: inline-block;
@@ -488,8 +517,9 @@ footer {
 	/***************** PROJECTS SECTION *****************/
 
 	.part2-inner {
-		height: 100vh;
+		height: 100%;
 		width: 90%;
+
 		h2 {
 			margin: 4rem;
 		}
@@ -516,9 +546,24 @@ footer {
 		max-width: 99.9rem;
 	}
 
+	.row-form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		label:after {
+			content: '\00a0';
+		}
+	}
+
+	label {
+		font-size: calc(2rem + 0.2vw);
+	}
+
 	.container-form {
 		justify-content: center;
+		padding: 4.5rem;
 	}
+
 	/***************** FOOTER SECTION *****************/
 	.scene + .part4 {
 		height: 40vh;

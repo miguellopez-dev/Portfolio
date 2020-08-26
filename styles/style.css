@@ -47,23 +47,143 @@ h4 {
 
 @-webkit-keyframes bounce {
   from {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translateY(-2%);
+            transform: translateY(-2%);
   }
   to {
-    -webkit-transform: translate(8%, -12%);
-            transform: translate(8%, -12%);
+    -webkit-transform: translateY(4%);
+            transform: translateY(4%);
   }
 }
 
 @keyframes bounce {
   from {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translateY(-2%);
+            transform: translateY(-2%);
   }
   to {
-    -webkit-transform: translate(8%, -12%);
-            transform: translate(8%, -12%);
+    -webkit-transform: translateY(4%);
+            transform: translateY(4%);
+  }
+}
+
+@-webkit-keyframes light {
+  to {
+    fill: #fefe33;
+  }
+}
+
+@keyframes light {
+  to {
+    fill: #fefe33;
+  }
+}
+
+@-webkit-keyframes topRightGlobe {
+  6% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(-70%, 20%);
+            transform: translate(-70%, 20%);
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@keyframes topRightGlobe {
+  6% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(-70%, 20%);
+            transform: translate(-70%, 20%);
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@-webkit-keyframes topLeftGlobe {
+  7% {
+    opacity: 0;
+  }
+  44% {
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(60%, 40%);
+            transform: translate(60%, 40%);
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@keyframes topLeftGlobe {
+  7% {
+    opacity: 0;
+  }
+  44% {
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(60%, 40%);
+            transform: translate(60%, 40%);
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@-webkit-keyframes bottomRightGlobe {
+  8% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(-50%, -40%);
+            transform: translate(-50%, -40%);
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+@keyframes bottomRightGlobe {
+  8% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translate(-50%, -40%);
+            transform: translate(-50%, -40%);
+    opacity: 100%;
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
   }
 }
 
@@ -459,11 +579,6 @@ nav ul {
   border-radius: 0 0 8px 8px;
   background-color: #f7f7f7;
   padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .contact {
@@ -577,20 +692,21 @@ footer {
 }
 
 /***************** MEDIA QUERIES SECTION *****************/
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .header {
     width: 70%;
     margin-left: 5rem;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    max-height: 10vh;
   }
   nav {
     width: 100%;
   }
   .logo {
     width: 60%;
-    min-width: 55%;
+    min-width: 40%;
   }
   .nav-links {
     width: 100%;
@@ -635,6 +751,11 @@ footer {
     width: 50%;
     height: auto;
   }
+  .side-text h2,
+  .side-text h3,
+  .side-text h4 {
+    font-size: calc(3rem + 1vw);
+  }
   .side-image {
     width: 50%;
     display: -webkit-box;
@@ -648,13 +769,36 @@ footer {
     display: inline-block;
     width: 40%;
   }
+  #idea {
+    -webkit-animation: bounce linear 1s alternate infinite;
+            animation: bounce linear 1s alternate infinite;
+  }
+  #lamp #outer-shine,
+  #lamp #right-line,
+  #lamp #left-line,
+  #lamp #swiggle {
+    -webkit-animation: light linear 1.2s alternate infinite;
+            animation: light linear 1.2s alternate infinite;
+  }
+  #top-right-globe {
+    -webkit-animation: topRightGlobe linear 2.3s infinite;
+            animation: topRightGlobe linear 2.3s infinite;
+  }
+  #top-left-globe {
+    -webkit-animation: topLeftGlobe linear 2.1s infinite;
+            animation: topLeftGlobe linear 2.1s infinite;
+  }
+  #bottom-right-globe {
+    -webkit-animation: bottomRightGlobe linear 2.5s infinite;
+            animation: bottomRightGlobe linear 2.5s infinite;
+  }
   .idea {
     display: inline-block;
     width: 59%;
   }
   /***************** PROJECTS SECTION *****************/
   .part2-inner {
-    height: 100vh;
+    height: 100%;
     width: 90%;
   }
   .part2-inner h2 {
@@ -690,10 +834,28 @@ footer {
   .part3-inner {
     max-width: 99.9rem;
   }
+  .row-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .row-form label:after {
+    content: '\00a0';
+  }
+  label {
+    font-size: calc(2rem + 0.2vw);
+  }
   .container-form {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 4.5rem;
   }
   /***************** FOOTER SECTION *****************/
   .scene + .part4 {

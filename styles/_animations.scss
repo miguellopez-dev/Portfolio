@@ -1,0 +1,84 @@
+/***************** KEYFRAMES SECTION *****************/
+@keyframes wave {
+	from {
+		transform: rotateZ(11deg);
+	}
+	to {
+		transform: rotateZ(-11deg);
+	}
+}
+
+@keyframes bounce {
+	from {
+		transform: translateY(-2%);
+	}
+	to {
+		transform: translateY(4%);
+	}
+}
+
+@keyframes light {
+	to {
+		fill: #fefe33;
+	}
+}
+
+@keyframes topRightGlobe {
+	6% {
+		opacity: 0;
+	}
+	42% {
+		opacity: 0;
+	}
+	50% {
+		transform: translate(-70%, 20%);
+		opacity: 100%;
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
+
+@keyframes topLeftGlobe {
+	7% {
+		opacity: 0;
+	}
+	44% {
+		opacity: 0;
+	}
+	50% {
+		transform: translate(60%, 40%);
+		opacity: 100%;
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
+
+@keyframes bottomRightGlobe {
+	8% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	50% {
+		transform: translate(-50%, -40%);
+		opacity: 100%;
+	}
+
+	100% {
+		transform: translate(0%, 0%);
+	}
+}
+
+@keyframes opa {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
