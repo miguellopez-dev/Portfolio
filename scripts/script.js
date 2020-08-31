@@ -1,9 +1,10 @@
-let burger, nav, navbg, links, img;
+let burger, nav, navbg, links;
 burger = document.querySelector('.burger');
 nav = document.querySelector('.nav-links');
 links = nav.querySelectorAll('a');
 navbg = document.querySelector('.dark-bg-nav');
 
+//Mobile nav bar
 const toggleAllTheThings = () => {
 	nav.classList.toggle('nav-open');
 	navbg.classList.toggle('dark-bg-active');
@@ -26,7 +27,7 @@ navbg.addEventListener('click', () => {
 	toggleAllTheThings();
 });
 
-// IMG Gallery
+// Img Gallery
 
 img1 = document.querySelectorAll('.imgs');
 const expandImg = document.getElementById('expandedImg');
@@ -58,37 +59,6 @@ function imgPop() {
 
 img1.forEach((item) => {
 	item.addEventListener('click', imgPop);
-});
-
-//Form validation
-
-let form = document.contact;
-
-form.addEventListener('input', () => {
-	let mark = document.querySelectorAll('.required');
-
-	//  Decide if you are going to try to implement your own form verification .
-
-	let atPos = form.email.value.indexOf('@');
-	let dotPos = form.email.value.indexOf('.');
-
-	if (atPos < 1 || dotPos - atPos < 2) {
-		mark[0].innerHTML = '&ast;';
-	} else {
-		mark[0].textContent = '';
-	}
-
-	// if (form.email.value.length >= 1) {
-	// 	mark[0].textContent = '';
-	// } else {
-	// 	mark[0].innerHTML = '&ast;';
-	// }
-
-	if (form.message.value.length >= 5) {
-		mark[1].textContent = '';
-	} else {
-		mark[1].innerHTML = '&ast;';
-	}
 });
 
 // Copyright date

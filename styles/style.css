@@ -14,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-size: 1.5rem;
+}
+
 h2 {
   font-size: 3.8rem;
 }
@@ -253,6 +257,11 @@ h4 {
   z-index: 10;
 }
 
+.header-nav-shadow {
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(29, 56, 77, 0.63);
+          box-shadow: 0px 0px 5px 5px rgba(29, 56, 77, 0.63);
+}
+
 .header {
   width: 60%;
   margin: auto;
@@ -430,13 +439,18 @@ nav ul {
   font-size: 3rem;
 }
 
+.side-text .about {
+  width: 70%;
+  margin: auto;
+  font-size: 1.6rem;
+}
+
 .contact-btn {
   padding: 2rem 4rem;
   text-decoration: none;
   background-color: #142850;
   border-radius: 0.5rem;
   color: #dae1e7;
-  font-size: 1.5rem;
   display: inline-block;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -528,7 +542,6 @@ nav ul {
 }
 
 #infoText {
-  font-size: 1.5rem;
   background-color: #ffffff;
   border-radius: 0 0 11px 11px;
   padding: 1rem;
@@ -540,7 +553,6 @@ nav ul {
 }
 
 #infoText p {
-  font-size: 1.5rem;
   padding: 1.4rem 2.5rem;
 }
 
@@ -561,75 +573,50 @@ nav ul {
 /***************** CONTACT SECTION *****************/
 .part3-inner {
   width: 80%;
-  margin: 5rem auto;
+  margin: 6rem auto;
   height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
 }
 
-.container-form {
-  border-radius: 0 0 8px 8px;
-  background-color: #f7f7f7;
-  padding: 2rem;
+.part3-inner img {
+  width: 100%;
+  height: 100%;
+  opacity: 65%;
 }
 
 .contact {
+  width: 80%;
+  position: absolute;
+  padding-top: 1.8rem;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -35%);
+          transform: translate(-50%, -35%);
+}
+
+.contact p {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+.message-btn {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1.5rem 4rem;
+  border-radius: 0.5rem;
   background-color: #142850;
-  border-radius: 8px 8px 0 0;
-  font-size: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: #dae1e7;
   text-align: center;
-  padding: 2rem;
-  color: #dce6ef;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-.required {
-  color: red;
-}
-
-input[type='text'],
-input[type='email'],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100px;
-          flex: 1 1 100px;
-}
-
-input[type='submit'] {
-  width: 100%;
-  background-color: #27496d;
-  color: #dce6ef;
-  padding: 12px 20px;
-  -webkit-appearance: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type='submit']:hover {
+.message-btn:hover {
   background-color: #00909e;
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
-}
-
-label {
-  font-size: 1.5rem;
-  color: #27496d;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /***************** FOOTER SECTION *****************/
@@ -756,6 +743,10 @@ footer {
   .side-text h4 {
     font-size: calc(3rem + 1vw);
   }
+  .side-text .about {
+    font-size: calc(0.6rem + 1vw);
+    line-height: 3.2rem;
+  }
   .side-image {
     width: 50%;
     display: -webkit-box;
@@ -832,30 +823,32 @@ footer {
   }
   /***************** CONTACTS SECTION *****************/
   .part3-inner {
-    max-width: 99.9rem;
-  }
-  .row-form {
+    width: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .row-form label:after {
-    content: '\00a0';
+  .part3-inner img {
+    width: 60%;
+    opacity: initial;
   }
-  label {
-    font-size: calc(2rem + 0.2vw);
+  .contact {
+    position: unset;
+    -webkit-transform: initial;
+            transform: initial;
+    width: 35%;
+    max-width: 40.6rem;
   }
-  .container-form {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 4.5rem;
+  .contact p {
+    font-size: calc(0.5rem + 1vw);
+    line-height: 2.5rem;
   }
   /***************** FOOTER SECTION *****************/
   .scene + .part4 {

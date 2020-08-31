@@ -41,6 +41,10 @@
 	z-index: 10;
 }
 
+.header-nav-shadow {
+	box-shadow: 0px 0px 5px 5px rgba(29, 56, 77, 0.63);
+}
+
 .header {
 	width: 60%;
 	margin: auto;
@@ -186,6 +190,12 @@ nav {
 	h4 {
 		font-size: 3rem;
 	}
+
+	.about {
+		width: 70%;
+		margin: auto;
+		font-size: 1.6rem;
+	}
 }
 
 .contact-btn {
@@ -194,7 +204,7 @@ nav {
 	background-color: $dark-primary;
 	border-radius: 0.5rem;
 	color: $light-color;
-	font-size: 1.5rem;
+
 	display: inline-block;
 	transition: all 0.2s;
 
@@ -275,7 +285,6 @@ nav {
 	}
 }
 #infoText {
-	font-size: 1.5rem;
 	background-color: #ffffff;
 	border-radius: 0 0 11px 11px;
 	padding: 1rem;
@@ -285,7 +294,6 @@ nav {
 		padding-top: 1rem;
 	}
 	p {
-		font-size: 1.5rem;
 		padding: 1.4rem 2.5rem;
 	}
 
@@ -306,62 +314,48 @@ nav {
 
 .part3-inner {
 	width: 80%;
-	margin: 5rem auto;
+	margin: 6rem auto;
 	height: 100%;
-	flex-direction: column;
-	justify-content: center;
-	display: flex;
-}
-.container-form {
-	border-radius: 0 0 8px 8px;
-	background-color: #f7f7f7;
-	padding: 2rem;
-}
-.contact {
-	background-color: $dark-primary;
-	border-radius: 8px 8px 0 0;
-	font-size: 2rem;
-	text-align: center;
-	padding: 2rem;
-	color: $background-color;
-}
+	position: relative;
 
-.required {
-	color: red;
-}
-
-input[type='text'],
-input[type='email'],
-select,
-textarea {
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	margin-top: 6px;
-	margin-bottom: 16px;
-	resize: vertical;
-	flex: 1 1 100px;
-}
-
-input[type='submit'] {
-	width: 100%;
-	background-color: $secondry-color;
-	color: $background-color;
-	padding: 12px 20px;
-	-webkit-appearance: none;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	&:hover {
-		background-color: $hover-color;
-		transition: background-color 0.2s linear;
+	img {
+		width: 100%;
+		height: 100%;
+		opacity: 65%;
 	}
 }
 
-label {
-	font-size: 1.5rem;
-	color: $secondry-color;
+.contact {
+	width: 80%;
+	position: absolute;
+	padding-top: 1.8rem;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -35%);
+	p {
+		margin-top: 1rem;
+		font-size: 1.3rem;
+	}
+}
+
+.message-btn {
+	margin-top: 2rem;
+	width: 100%;
+	padding: 1.5rem 4rem;
+	border-radius: 0.5rem;
+	background-color: $dark-primary;
+	display: inline-block;
+	text-decoration: none;
+	color: $light-color;
+	text-align: center;
+
+	transition: all 0.2s;
+
+	&:hover {
+		background-color: $hover-color;
+
+		transform: scale(1.1);
+	}
 }
 
 /***************** FOOTER SECTION *****************/
@@ -473,6 +467,10 @@ footer {
 		h4 {
 			font-size: calc(3rem + 1vw);
 		}
+		.about {
+			font-size: calc(0.6rem + 1vw);
+			line-height: 3.2rem;
+		}
 	}
 
 	.side-image {
@@ -543,25 +541,27 @@ footer {
 
 	/***************** CONTACTS SECTION *****************/
 	.part3-inner {
-		max-width: 99.9rem;
-	}
+		width: 70%;
 
-	.row-form {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		label:after {
-			content: '\00a0';
+		flex-direction: row-reverse;
+		justify-content: space-between;
+
+		img {
+			width: 60%;
+			opacity: initial;
 		}
 	}
 
-	label {
-		font-size: calc(2rem + 0.2vw);
-	}
-
-	.container-form {
-		justify-content: center;
-		padding: 4.5rem;
+	.contact {
+		position: unset;
+		transform: initial;
+		width: 35%;
+		max-width: 40.6rem;
+		p {
+			font-size: calc(0.5rem + 1vw);
+			line-height: 2.5rem;
+		}
 	}
 
 	/***************** FOOTER SECTION *****************/
